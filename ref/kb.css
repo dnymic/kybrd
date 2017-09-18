@@ -1,0 +1,36 @@
+
+body {
+    background-color:#3a3030;
+ }
+#keyboard {
+    display:inline-block;
+    padding:10px 15px;
+    border:1px solid #009;
+    border-radius:10px;
+    background-color:#87cdf9;
+    text-align:center;
+    box-shadow:4px 4px 4px #999;
+ }
+#keyboard div {
+    margin:5px 0;
+ }
+#space {
+    width:184px;
+ }
+#keyboard label {
+    margin-top:20px;
+    font-family:serif;
+    text-decoration:underline;
+ }
+#keyboard input {
+    box-shadow:2px 2px 2px #666;
+ }
+#keyboard input[type="text"] {
+    margin-top:20px;
+    border:1px solid #666;
+    border-radius:4px;
+    box-shadow:none;
+ }
+#keyboard #back {
+    font-weight:bold;
+ }
