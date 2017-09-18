@@ -33,6 +33,9 @@ $('#jkeyboard').jkeyboard({
     layout: "russian",
     input: $('#input_text')
   });
+
+
+  document.getElementById("input_text").readOnly = true;
   
 });
 
