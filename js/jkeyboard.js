@@ -16,7 +16,7 @@
     var pluginName = "jkeyboard",
         defaults = {
             layout: "english",
-            input: $('#input')
+            input: $('#input') //Change this to point to the input element in the html
         };
 
 
@@ -66,7 +66,11 @@
 
 
     var layouts = {
-        selectable: ['russian','numbers_only'],
+        selectable: ['english', 'russian'],
+        french:[
+            ['a','b','c'],
+            ['d','e','f']
+        ],
         azeri: [
             ['q', 'ü', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'ö', 'ğ'],
             ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'ı', 'ə'],
@@ -149,7 +153,7 @@
 
             line.forEach(function (key, index) {
                 var key_container = $('<li/>').addClass('jkey').data('command', key);
-
+                console.log(key);//Test 
                 if (function_keys[key]) {
                     key_container.addClass(key).html(function_keys[key].text);
                 }
@@ -215,6 +219,7 @@
         type: function (key) {
             var input = this.settings.input,
                 val = input.val(),
+                
                 input_node = input.get(0),
                 start = input_node.selectionStart,
                 end = input_node.selectionEnd;
